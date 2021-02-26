@@ -16,10 +16,16 @@ public class Heater {
     }
 
     public void warmUp() {
-        temperature += increment;
+        if(temperature + increment <= max)
+            temperature += increment;
+        else
+            System.out.println("Temperatura máxima atingida, valor não atribuido");
     }
 
     public void cool() {
-        temperature -= increment;
+        if(temperature + increment >= min)
+            temperature -= increment;
+        else
+            System.out.println("Temperatura mínima atingida, valor não atribuido");
     }
 }

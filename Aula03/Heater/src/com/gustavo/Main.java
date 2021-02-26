@@ -11,5 +11,7 @@ public class Main {
         h1.warmUp();
         h1.warmUp();
         System.out.println(h1.getTemperature());
+        h1.warmUp();
+        System.out.println(h1.getTemperature());
     }
 }
