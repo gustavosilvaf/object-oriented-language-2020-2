@@ -2,9 +2,13 @@ package com.gustavo;
 
 public class Heater {
     private int temperature;
+    private int min, max, increment;
 
-    public Heater() {
+    public Heater(int minTemperature, int maxTemperature) {
         temperature = 15;
+        min = minTemperature;
+        max = maxTemperature;
+        increment = 5;
     }
 
     public int getTemperature() {
@@ -12,10 +16,10 @@ public class Heater {
     }
 
     public void warmUp() {
-        temperature += 5;
+        temperature += increment;
     }
 
     public void cool() {
-        temperature -= 5;
+        temperature -= increment;
     }
 }
