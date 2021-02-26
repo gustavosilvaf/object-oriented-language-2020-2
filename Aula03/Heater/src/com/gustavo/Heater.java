@@ -11,6 +11,10 @@ public class Heater {
         increment = 5;
     }
 
+    public void setIncrement(int increment) {
+        this.increment = increment;
+    }
+
     public int getTemperature() {
         return temperature;
     }
@@ -23,7 +27,7 @@ public class Heater {
     }
 
     public void cool() {
-        if(temperature + increment >= min)
+        if(temperature - increment >= min)
             temperature -= increment;
         else
             System.out.println("Temperatura mínima atingida, valor não atribuido");
